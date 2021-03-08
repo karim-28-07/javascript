@@ -28,5 +28,11 @@ var basicDown = ("this is cool");
 // Split 
 
 var word = "banana";
-var letters = word.split("banana");
-colsole.log(letters);
+var letters = word.split("");
+//console.log(letters);
+
+// Template 
+
+var age = 37;
+var template = (`I'm ${age} years old`);
+console.log(template);
