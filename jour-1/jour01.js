@@ -36,3 +36,17 @@ console.log(letters);
 var age = 37;
 var template = (`I'm ${age} years old`);
 console.log(template);
+
+// Substring 
+
+var test = "Bonjour Konexio";
+var sub = test.substring(3, 10);
+var end = test.substring(4);
+console.log(sub);
+console.log(end);
+
+// Bonus
+
+var changed = "bonjour";
+changed = changed.replace(/o/g, "a");
+console.log(changed);
