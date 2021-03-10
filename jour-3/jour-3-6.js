@@ -1,9 +1,10 @@
 // Reverse
 
 var sentence = "Hello Konexio !";
+var tab = [];
 
-for (var i = 0; i = "Hello Konexio !"; i--){
-    console.log(i);
+for ( i = sentence.length-1; i >= 0; i--){
+    tab.push(sentence[i])
 }
 
-console.log(sentence);
+console.log(tab.join());
