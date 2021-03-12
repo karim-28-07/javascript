@@ -1,17 +1,19 @@
 // Add Up
-var min = 0;
-var max = 12;
+// var min = 0;
+// var max = 12;
 
 function addUp(num) {
-    // var min = 0;
-    // var max = 12;
-
-    for (var i = 0; i <= max; i++) {
-        min += i;
-        console.log(min);
+    
+    var result = 0;
+    for (var i = 1; i <= num; i++) {
+        result = i + result;
     }
-        //  console.log(min);
+
+    console.log(result);
 }
 
 
-addUp(max);
+addUp(12);
+// addUp(4);
+// addUp(10);
+
