@@ -1,13 +1,21 @@
 // Chanceux 
 
-var total = 20;
+// Lancez un dé 20 fois et affichez la somme de tout les résultats plus grand ou égale à 5
 
-for (var i = 0; i >= 5; i++) {
-    
-    total+= i;
-   if (i >= 5){
+var sum = 0;
+var min = 1;
+var max = 6;
+
+for(var i = 1; i <=20; i++){
+
+    var dice = Math.floor(Math.random()* (max - min + 1) + min);
+     
+    if(dice >= 5){
+
+        sum+= dice; 
+    }
 
 }
 
-}
-console.log(total);
+console.log(sum);
+
