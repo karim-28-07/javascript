@@ -17,3 +17,4 @@ if (res.q < numRandom || res.q > numRandom) {
 }
 
 displayPrompt(); 
+
