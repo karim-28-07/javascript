@@ -2,10 +2,21 @@
 
 var roundedNumber = 3.6;
 
-partiedecimale = roundedNumber - Math.floor(roundedNumber)
+console.log(Math.floor(roundedNumber));
+console.log(Math.ceil(roundedNumber));
 
-if (partiedecimale > 0.5){
+var decimal = roundedNumber - Math.floor(roundedNumber);
+
+console.log(decimal);
+
+if (decimal >= 0.5) {
     console.log(Math.ceil(roundedNumber));
 }else {
     console.log(Math.floor(roundedNumber));
 }
+
+
+
+
+
+

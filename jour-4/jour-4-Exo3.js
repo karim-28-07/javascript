@@ -1,5 +1,6 @@
 // Even 
 var number = 3;
+
 function checkIfEven(num) {
     console.log(num);
     if (num % 2 === 0) {

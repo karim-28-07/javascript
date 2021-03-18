@@ -3,7 +3,7 @@
 var sentence = "Hello Konexio !";
 var tab = [];
 
-for ( i = sentence.length-1; i >= 0; i--){
+for ( var i = sentence.length-1; i >= 0; i--){
     tab.push(sentence[i])
 }
 

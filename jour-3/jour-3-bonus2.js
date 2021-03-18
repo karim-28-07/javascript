@@ -3,10 +3,15 @@
 var total = 0;
 var limit = 10;
 
-while (total < limit) {
-    total++;
+var i = 0;
+
+while (i <= limit) {
+    total += 1;
+
+    i++;
 
 }
+
 console.log(total);
 
 
