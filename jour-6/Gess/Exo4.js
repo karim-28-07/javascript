@@ -1,20 +1,41 @@
 var prompt = require("prompt");
 
-prompt.start();
 var numRandom = Math.floor(Math.random() * (100 - 1 + 1) + 1);
 
-function displayPrompt() {
+// console.log(numRandom);
 
-  prompt.get({ name: "q", description: "Quel est le nombre mystère ?" }, function play (err, res) { 
-    
-var numRandom = Math.floor(Math.random() * (100 - 1 + 1) + 1);
-if (res.q < numRandom || res.q > numRandom) { 
-      console.log("Bien reçu !");
-    } else {
-      displayPrompt(); 
+
+
+function play() {
+
+  prompt.get(
+    {
+      name: "numUser",
+      description: "Quel est le nombre mystère ?",
+      validator: /^[1-9][0-9]$|^100$/g,
+    },
+
+
+    function (err, res) {
+
+      if (res.numUser < numRandom) {
+        console.log("C'est plus !");
+        play();
+
+      } else if (res.numUser > numRandom) {
+
+        console.log("C'est moins !");
+        play()
+
+      } else {
+        console.log("Bravo !!!!")
+      }
     }
-  });
+
+  );
+
+
 }
 
-displayPrompt(); 
+play();
 

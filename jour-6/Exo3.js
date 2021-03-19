@@ -5,29 +5,30 @@
 //     - le mot de passe doit contenir au moins 6 caractères, au moins une lettre et au moins un chiffre, et peut contenir des tirets
 // - Si tout est bon, elle retourne "All good !", sinon elle retourne "error"
 
+
+var prompt = require("prompt");
+
 function checkProfile() {
-
-    var prompt = require("prompt");
-
+    
     var properties = [
         {
             name: "username",
 
-            validator: /[a-z0-9_-]^[_]/, 
+            validator: /([A-Za-z -]+)/g,
 
             warning: "Le username ne doit contenir que des lettres, espaces et tirets"
         
         },
         {
-            email:"email",
+            name:"email",
 
-            validator:/^[a-zA-Z\s\-]+$/,
+            validator:/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/i,
            
         },
         {
             name: "password",
 
-            validator: /^[a-zA-Z\s\-]+$/,
+            validator: /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z-_]{6,}$/,
 
             hidden: true // n'affichera pas la saisie de l'utilisateur à l'écran
         }
@@ -48,11 +49,11 @@ function checkProfile() {
             return onErr(err);
         }
 
-        console.log("Données reçues :");
+        console.log("All good !!");
 
-        console.log("=> Username : " + res.username);
+        // console.log("=> Username : " + res.username);
 
-        console.log("=> Password : " + res.password);
+        // console.log("=> Password : " + res.password);
     });
 }
 

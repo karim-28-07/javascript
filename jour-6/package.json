@@ -8,7 +8,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "colors": "^1.4.0",
     "lodash": "^4.17.21",
+    "moment": "^2.29.1",
     "prompt": "^1.1.0"
   },
   "devDependencies": {},
