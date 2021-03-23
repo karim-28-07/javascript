@@ -1,11 +1,13 @@
 var fs = require("fs");
 
-fs.stat("jour07.txt", function (err, stats){
+fs.readFile("jour07.txt", function (err, data){
     if (err){
-        return console.log(err);
+        
+        console.log(err);
+        return 
     }
 
-    console.log(stats);
+    console.log("jour07 texte :" + data.toString());
 
     });
 

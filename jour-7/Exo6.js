@@ -60,7 +60,10 @@ var myCakesFavoritelist = cakes.filter(function(cake){
         return cake;
 
     }
-});
+}
+)
+
+;
 
 console.log(myCakesFavoritelist);
 
