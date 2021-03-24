@@ -9,16 +9,16 @@ function getCountries() {
     request.get("https://restcountries.eu/rest/v1/all", function (err, res, body) {
 
 
-        countriesNames = JSON.parse(body);
+        var result = JSON.parse(body);
 
-        countriesNames.map(function (elem) {
+        countriesNames = result.map(function (elem) {
 
-            console.log(elem.name)
-            // console.log(countriesNames.push(elem.name));
-           
-
+            return elem.name
+            
+            
         });
-
+        
+        console.log(countriesNames.join(" - "))
 
     });
 
