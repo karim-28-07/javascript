@@ -11,7 +11,7 @@ function catchPokemon (id) {
 
         console.log("id:", id);
         
-        console.log("name :", pokemonGame.results[id].name);
+        console.log("name :", pokemonGame.results[id - 1].name);
     
         
     });
@@ -19,7 +19,7 @@ function catchPokemon (id) {
 
 }
 
-catchPokemon(444)
+catchPokemon(900)
 
 
 
